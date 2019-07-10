@@ -25,6 +25,7 @@ def browser(request):
     else:
         print("Browser {} still is not implemented".format(browser_name))
         raise Exception 
+    browser.implicitly_wait(15)
     yield browser
     print("\nquit browser..")
     browser.quit()
